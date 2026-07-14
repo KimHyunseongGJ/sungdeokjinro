@@ -5,20 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>숭덕고등학교 2026 교과진로박람회</title>
     <style>
-        /* 기본 스타일 및 배경 설정 */
+        /* 기본 스타일 설정 */
         body {
             margin: 0;
             padding: 0;
             font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            
-            /* 🎨 배경 색상 (그라데이션) 설정 */
-            background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-            
-            /* 🖼️ 배경을 '이미지'로 바꾸고 싶다면 위 background 코드를 지우고 아래 3줄의 주석(/* */)을 지운 후 이미지 링크를 넣으세요 */
-            /* background-image: url('여기에_배경이미지_링크를_넣으세요.jpg'); */
-            /* background-size: cover; */
-            /* background-position: center; */
-
+            background-color: #f0f4f8; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -27,16 +19,12 @@
             color: #333;
         }
 
-        /* 중앙 콘텐츠 박스 (반투명 유리 효과) */
+        /* 중앙 콘텐츠 박스 */
         .container {
-            background-color: rgba(255, 255, 255, 0.85); /* 반투명한 흰색 배경 */
-            backdrop-filter: blur(10px); /* 배경을 흐리게 (유리 효과) */
-            -webkit-backdrop-filter: blur(10px); /* 사파리 브라우저 호환 */
-            border: 1px solid rgba(255, 255, 255, 0.3); /* 얇고 투명한 테두리 */
-            
+            background-color: #ffffff;
             padding: 40px 20px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             width: 90%;
             max-width: 450px;
         }
@@ -48,12 +36,11 @@
             margin-bottom: 10px;
             line-height: 1.4;
             word-break: keep-all;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.8); /* 글자가 더 잘 보이도록 그림자 추가 */
         }
         
         .subtitle {
             font-size: 0.95rem;
-            color: #475569;
+            color: #64748b;
             margin-bottom: 35px;
             word-break: keep-all;
         }
@@ -62,8 +49,8 @@
         .icon-group {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; 
-            gap: 20px; 
+            flex-wrap: wrap; /* 3개가 넘어가면 자연스럽게 다음 줄로 넘어가도록 추가 */
+            gap: 20px; /* 아이콘 사이 간격 */
         }
 
         /* 개별 아이콘 링크 스타일 */
@@ -73,8 +60,8 @@
             align-items: center;
             text-decoration: none;
             transition: transform 0.2s ease, opacity 0.2s ease;
-            width: 30%; 
-            min-width: 110px; 
+            width: 30%; /* 3개가 한 줄에 들어가거나 여유 있게 배치되도록 너비 조정 */
+            min-width: 110px; /* 모바일에서 너무 작아지지 않도록 최소 너비 설정 */
         }
 
         .icon-link:hover, .icon-link:active {
@@ -90,7 +77,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 35px; 
+            font-size: 35px; /* 이모지 크기 */
             margin-bottom: 15px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
@@ -102,12 +89,12 @@
 
         /* 두 번째 아이콘 색상 (구글 드라이브) */
         .icon-drive {
-            background: linear-gradient(135deg, #10b981, #059669); 
+            background: linear-gradient(135deg, #10b981, #059669); /* 초록색 톤 */
         }
 
         /* 세 번째 아이콘 색상 (리로스쿨) */
         .icon-riro {
-            background: linear-gradient(135deg, #8b5cf6, #6d28d9); 
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9); /* 보라색 톤 */
         }
 
         /* 링크 텍스트 */
@@ -127,16 +114,25 @@
         <div class="subtitle">원하는 진로와 학과 정보를 탐색해 보세요!</div>
 
         <div class="icon-group">
+            <!-- 1. 대입정보포털 링크 -->
             <a href="https://www.adiga.kr/man/inf/mainView.do?menuId=PCMANINF1000" target="_blank" rel="noopener noreferrer" class="icon-link">
                 <div class="icon-bg icon-adiga">🎓</div>
                 <span class="link-text">대입정보포털<br>(adiga)</span>
             </a>
 
+            <!-- 2. 구글 드라이브 파일 링크 -->
             <a href="https://drive.google.com/file/d/1ymYte8VbxU_iCgZzjB_FCU04bU-V1ZXP/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="icon-link">
                 <div class="icon-bg icon-drive">📖</div>
                 <span class="link-text">2022 개정<br>선택 과목 안내서</span>
             </a>
 
+            <!-- 3. 리로스쿨 링크 (새로 추가됨) -->
             <a href="https://sdok.riroschool.kr/" target="_blank" rel="noopener noreferrer" class="icon-link">
                 <div class="icon-bg icon-riro">🏫</div>
-                <span class="link-
+                <span class="link-text">리로스쿨</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
