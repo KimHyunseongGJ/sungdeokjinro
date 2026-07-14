@@ -45,10 +45,11 @@
             word-break: keep-all;
         }
 
-        /* 아이콘 그룹 (나란히 배치) */
+        /* 아이콘 그룹 (나란히 배치 및 줄바꿈 허용) */
         .icon-group {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* 3개가 넘어가면 자연스럽게 다음 줄로 넘어가도록 추가 */
             gap: 20px; /* 아이콘 사이 간격 */
         }
 
@@ -59,7 +60,8 @@
             align-items: center;
             text-decoration: none;
             transition: transform 0.2s ease, opacity 0.2s ease;
-            width: 45%; /* 모바일에서 반씩 차지하도록 설정 */
+            width: 30%; /* 3개가 한 줄에 들어가거나 여유 있게 배치되도록 너비 조정 */
+            min-width: 110px; /* 모바일에서 너무 작아지지 않도록 최소 너비 설정 */
         }
 
         .icon-link:hover, .icon-link:active {
@@ -90,6 +92,11 @@
             background: linear-gradient(135deg, #10b981, #059669); /* 초록색 톤 */
         }
 
+        /* 세 번째 아이콘 색상 (리로스쿨) */
+        .icon-riro {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9); /* 보라색 톤 */
+        }
+
         /* 링크 텍스트 */
         .link-text {
             font-weight: 700;
@@ -107,14 +114,22 @@
         <div class="subtitle">원하는 진로와 학과 정보를 탐색해 보세요!</div>
 
         <div class="icon-group">
+            <!-- 1. 대입정보포털 링크 -->
             <a href="https://www.adiga.kr/man/inf/mainView.do?menuId=PCMANINF1000" target="_blank" rel="noopener noreferrer" class="icon-link">
                 <div class="icon-bg icon-adiga">🎓</div>
                 <span class="link-text">대입정보포털<br>(adiga)</span>
             </a>
 
+            <!-- 2. 구글 드라이브 파일 링크 -->
             <a href="https://drive.google.com/file/d/1ymYte8VbxU_iCgZzjB_FCU04bU-V1ZXP/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="icon-link">
                 <div class="icon-bg icon-drive">📖</div>
-                <span class="link-text">2022 개정 교육과정<br>선택 과목 안내서</span>
+                <span class="link-text">2022 개정<br>선택 과목 안내서</span>
+            </a>
+
+            <!-- 3. 리로스쿨 링크 (새로 추가됨) -->
+            <a href="https://sdok.riroschool.kr/" target="_blank" rel="noopener noreferrer" class="icon-link">
+                <div class="icon-bg icon-riro">🏫</div>
+                <span class="link-text">리로스쿨</span>
             </a>
         </div>
     </div>
