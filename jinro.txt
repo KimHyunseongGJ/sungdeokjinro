@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숭덕고등학교 2026 교과진로박람회</title>
+    <style>
+        /* 기본 스타일 설정 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f0f4f8; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            color: #333;
+        }
+
+        /* 중앙 콘텐츠 박스 */
+        .container {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            width: 90%;
+            max-width: 450px;
+        }
+
+        /* 행사 제목 */
+        h1 {
+            font-size: 1.5rem;
+            color: #1e3a8a; 
+            margin-bottom: 10px;
+            line-height: 1.4;
+            word-break: keep-all;
+        }
+        
+        .subtitle {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 35px;
+            word-break: keep-all;
+        }
+
+        /* 아이콘 그룹 (나란히 배치) */
+        .icon-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* 아이콘 사이 간격 */
+        }
+
+        /* 개별 아이콘 링크 스타일 */
+        .icon-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            width: 45%; /* 모바일에서 반씩 차지하도록 설정 */
+        }
+
+        .icon-link:hover, .icon-link:active {
+            transform: translateY(-5px);
+            opacity: 0.9;
+        }
+
+        /* 아이콘 배경 원형 */
+        .icon-bg {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px; /* 이모지 크기 */
+            margin-bottom: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 첫 번째 아이콘 색상 (adiga) */
+        .icon-adiga {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+
+        /* 두 번째 아이콘 색상 (구글 드라이브) */
+        .icon-drive {
+            background: linear-gradient(135deg, #10b981, #059669); /* 초록색 톤 */
+        }
+
+        /* 링크 텍스트 */
+        .link-text {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #1e40af;
+            line-height: 1.3;
+            word-break: keep-all;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>숭덕고등학교<br>2026 교과진로박람회</h1>
+        <div class="subtitle">원하는 진로와 학과 정보를 탐색해 보세요!</div>
+
+        <div class="icon-group">
+            <a href="https://www.adiga.kr/man/inf/mainView.do?menuId=PCMANINF1000" target="_blank" rel="noopener noreferrer" class="icon-link">
+                <div class="icon-bg icon-adiga">🎓</div>
+                <span class="link-text">대입정보포털<br>(adiga)</span>
+            </a>
+
+            <a href="https://drive.google.com/file/d/1ymYte8VbxU_iCgZzjB_FCU04bU-V1ZXP/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="icon-link">
+                <div class="icon-bg icon-drive">📖</div>
+                <span class="link-text">2022 개정 교육과정<br>선택 과목 안내서</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
